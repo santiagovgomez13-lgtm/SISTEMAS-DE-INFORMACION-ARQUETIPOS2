@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+:root {
+  --violeta: #8b4dff;
+  --magenta: #d6338a;
+  --rosa: #ff4fa3;
+  --gris: #ebebeb;
+  --tinta: #1d1d24;
+  --tinta-suave: #55555f;
+  --fondo: #ffffff;
+  --noche: #0a0420;
+  --fuente: 'Orbitron', 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--fuente);
+}
+
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+}
+
+/* ---------- Banner ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 24px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 120px 70px at 8% 85%, #ff4fe0 0%, transparent 70%),
+    radial-gradient(ellipse 130px 80px at 96% 12%, #7a4dff 0%, transparent 70%),
+    radial-gradient(ellipse 90px 60px at 82% 20%, #c24dff 0%, transparent 70%),
+    linear-gradient(135deg, #05030f 0%, #150a3a 55%, #0a0420 100%);
+}
+
+.hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  padding: 28px 24px 0;
+}
+
+.seccion h2 {
+  margin: 0 0 16px;
+  text-align: center;
+  color: var(--violeta);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.caja {
+  padding: 20px 24px;
+  text-align: center;
+  background: var(--gris);
+  border-top: 2px solid var(--magenta);
+  border-bottom: 2px solid var(--violeta);
+}
+
+.caja h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.caja p {
+  margin: 0;
+  color: var(--tinta-suave);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* ---------- Selector ---------- */
+.caja--selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.caja--selector label {
+  color: var(--tinta-suave);
+  font-size: 0.8rem;
+}
+
+select {
+  width: 100%;
+  max-width: 340px;
+  padding: 12px 14px;
+  background: #fff;
+  color: var(--tinta);
+  font-family: var(--fuente);
+  font-size: 0.85rem;
+  border: 2px solid var(--magenta);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: var(--violeta);
+}
+
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--violeta);
+  outline-offset: 3px;
+}
+
+/* ---------- Panel de presupuesto ---------- */
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 190px;
+  margin: 28px 24px 0;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 79, 163, 0.55), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(139, 77, 255, 0.7), transparent 55%),
+    linear-gradient(160deg, #0a0420, #1b0b4a);
+}
+
+.panel__gama {
+  margin: 0;
+  color: var(--rosa);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.panel__total {
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.panel__nota {
+  margin: 0;
+  color: #d8cffa;
+  font-size: 0.75rem;
+}
+
+/* ---------- Tabla de componentes ---------- */
+.seccion--tabla {
+  padding-bottom: 0;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid var(--magenta);
+  border-bottom: 2px solid var(--magenta);
+  font-size: 0.8rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 16px 14px;
+  text-align: left;
+  border-right: 2px solid var(--magenta);
+}
+
+.tabla th:last-child,
+.tabla td:last-child {
+  border-right: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tabla thead th {
+  color: var(--rosa);
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 2px solid var(--magenta);
+}
+
+.tabla thead th:last-child {
+  text-align: center;
+}
+
+.tabla tbody tr:nth-child(odd) {
+  background: var(--gris);
+}
+
+.tabla tbody th {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.tabla tbody td:nth-child(2) {
+  font-style: italic;
+}
+
+.tabla tfoot th,
+.tabla tfoot td {
+  color: var(--violeta);
+  font-weight: 700;
+  border-top: 2px solid var(--magenta);
+}
+
+.aviso {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--tinta-suave);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.pie a {
+  color: var(--violeta);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pie a:hover {
+  color: var(--magenta);
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 520px) {
+  .seccion {
+    padding: 24px 16px 0;
+  }
+
+  .panel {
+    margin: 24px 16px 0;
+  }
+
+  .tabla {
+    font-size: 0.72rem;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 12px 8px;
+  }
+}
